@@ -1,0 +1,28 @@
+{
+  "project": {
+    "pz": {
+      "sig": {
+        "beans": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "path": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "/beans"
+                },
+                "type": "PV"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "test": {}
+  }
+}
