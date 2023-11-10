@@ -73,36 +73,9 @@ const App = ({
   };
 
   return (
-    <>
-      <Head>
-        {/* page metadata */}
-        <title>{(pageTitle?.value as string) ?? 'Uniform Component Starter Kit'}</title>
-        <meta property="og:description" content={pageMetaDescription?.value as string} />
-        <meta name="keywords" content={pageKeywords?.value as string} />
-        {/* Open Graph */}
-        <meta property="og:title" content={(openGraphTitle?.value as string) ?? pageTitle?.value} />
-        <meta
-          property="og:description"
-          content={(openGraphDescription?.value as string) ?? pageMetaDescription?.value}
-        />
-        {renderOgImageElement()}
-        {/* Twitter */}
-        <meta name="twitter:title" content={(twitterTitle?.value as string) ?? pageTitle?.value} />
-        <meta name="twitter:card" content={(twitterCard?.value as string) ?? 'summary'} />
-        <meta
-          name="twitter:description"
-          content={(twitterDescription?.value as string) ?? pageMetaDescription?.value}
-        />
-        {renderTwitterImageElement() as any} {/* eslint-disable-line @typescript-eslint/no-explicit-any */}
-        {/* Other stuff */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="version" content={process.env.NEXT_PUBLIC_APP_VERSION} />
-        {favicon?.value && <link rel="shortcut icon" href={favicon?.value as string} />}
-      </Head>
       <UniformContext context={serverUniformContext ?? clientContext}>
         <Component {...pageProps} providers={FakeCartContextProvider} />
       </UniformContext>
-    </>
   );
 };
 

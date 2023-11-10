@@ -2,7 +2,7 @@
   "project": {
     "pz": {
       "sig": {
-        "beans": {
+        "queryStringPersonalization": {
           "str": 50,
           "cap": 100,
           "dur": "p",
@@ -11,12 +11,13 @@
             "type": "G",
             "clauses": [
               {
-                "path": {
+                "type": "QS",
+                "match": {
                   "cs": false,
                   "op": "=",
-                  "rhs": "/beans"
+                  "rhs": "true"
                 },
-                "type": "PV"
+                "queryName": "personalized"
               }
             ]
           }
