@@ -16,9 +16,9 @@ const App = ({
   pageProps,
   serverUniformContext,
 }: UniformAppProps<{ data: RootComponentInstance; context: unknown }>) => (
-    <UniformContext context={serverUniformContext ?? clientContext}>
-      <Component {...pageProps} providers={FakeCartContextProvider} />
-    </UniformContext>
-)
+  <UniformContext context={serverUniformContext ?? clientContext}>
+    <Component {...pageProps} providers={FakeCartContextProvider} />
+  </UniformContext>
+);
 
 export default App;
